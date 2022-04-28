@@ -33,6 +33,17 @@
             zoom: 5, // starting zoom
             center: [138, 38] // starting center
         });
+        map.on('load', () => {
+            map.addSource('earthquakes', {
+            type: 'geojson',
+            data: 'assets/earthquakes.geojson'
+            });
+            map.addLayer({
+                'id': 'earthquakes-layer',
+                'type': 'circle',
+                'source': 'earthquakes'
+            });
+        });
     </script>
 
 </body>

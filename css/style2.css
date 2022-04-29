@@ -15,14 +15,35 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 110px;
+    width: 115px;
     background: #fff;
     margin-right: 20px;
     margin-bottom: 40px;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 10px 10px 10px;
     border-radius: 3px;
-    text-align: center;
+    text-align: left;
     font-family: 'Open Sans', sans-serif;
+}
+#title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20pt;
+    color: rgb(0, 0, 0)
+}
+
+#subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 55px;
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+    color: rgb(0, 0, 0)
 }
 
 /* each line for a break */
@@ -51,27 +72,4 @@ body {
 /* the text color of a hyper link */
 a {
     color: black
-}
-
-#title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 25pt;
-    color: white
-}
-
-
-#subtitle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 70px;
-    margin-left: 190px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15pt;
-    color: white
 }

@@ -3,50 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Earthquakes in Japan</title>
+    <title>2020 US COVID-19 Rates by County</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style1.css"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
 </head>
 
 <body>
     <div id="map"></div>
-    <script>
-        mapboxgl.accessToken =
-            'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
-        let map = new mapboxgl.Map({
-            container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/light-v10',
-            zoom: 3.4, // starting zoom
-            center: [-96, 36] // starting center
-        });
-        map.on('load', () => {
-            map.addSource('covid', {
-                type: 'geojson',
-                data: 'assets/us-covid-2020-rates.json'
-            });
-
-            map.addLayer({
-                'id': 'covid-layer',
-                'type': 'line',
-                'source': 'covid'
-            });
-
-        });
-    </script>
+    <div class='map-overlay' id='features'>
+        <h2>2020 US COVID-19 Rates by County</h2>
+        <div id='text-escription'>
+            <p>Hover over a County!</p>
+        </div>
+    </div>
+    <div class='map-overlay' id='legend'></div>
+    <script src="js/main1.js"></script>
 
 </body>
 

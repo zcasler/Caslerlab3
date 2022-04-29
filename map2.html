@@ -36,12 +36,12 @@
         map.on('load', () => {
             map.addSource('covid', {
                 type: 'geojson',
-                data: 'assets/us-covid-2020-rates.json'
+                data: 'assets/us-covid-2020-counts.json'
             });
 
             map.addLayer({
                 'id': 'covid-layer',
-                'type': 'line',
+                'type': 'circle',
                 'source': 'covid'
             });
 
